@@ -8,7 +8,8 @@ namespace TestMaximum
     {
         public static void Main(string[] args)
         {
-            NonGeneric.GetMaxIntNumberAmongThree(13, 23, 45);
+            Console.WriteLine(NonGeneric.GetMaxIntNumberAmongThree(13, 23, 45));
+            Console.WriteLine( NonGeneric.GetMaxfloatNumberAmongThree(27.5f, 34.9f, 98.7f));
         }
     }
 }

@@ -51,5 +51,50 @@ namespace TestingMaximum
             ///Assert
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// Testing to return maximum number among three numbers
+        /// Giving maximum at First Position
+        /// </summary>
+        [TestMethod]
+        public void TestMaxFloatone()
+        {
+            ///Arrange
+            float expected = 98.7f;
+            ///Act
+            ///Calling GetMaximum method 
+            float actual = NonGeneric.GetMaxfloatNumberAmongThree(98.7f,27.5f, 34.9f);
+            ///Assert
+            Assert.AreEqual(expected, actual);
+        }
+        /// <summary>
+        /// Testing to return maximum number among three numbers
+        /// Giving maximum at Second Position
+        /// </summary>
+        [TestMethod]
+        public void TestMaxFloatTwo()
+        {
+            ///Arrange
+            float expected = 98.7f;
+            ///Act
+            ///Calling GetMaximum method 
+            float actual = NonGeneric.GetMaxfloatNumberAmongThree(27.5f,98.7f,34.9f);
+            ///Assert
+            Assert.AreEqual(expected, actual);
+        }
+        /// <summary>
+        /// Testing to return maximum number among three numbers
+        /// Giving maximum at third Position
+        /// </summary>
+        [TestMethod]
+        public void TestMaxFloatThree()
+        {
+            ///Arrange
+            float expected = 98.7f;
+            ///Act
+            ///Calling GetMaximum method 
+            float actual = NonGeneric.GetMaxfloatNumberAmongThree(27.5f, 34.9f, 98.7f);
+            ///Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
