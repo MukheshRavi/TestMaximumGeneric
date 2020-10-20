@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace TestMaximum
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Test Maximum Problem");
+            NonGeneric.GetMaxIntNumberAmongThree(13, 23, 45);
         }
     }
 }
