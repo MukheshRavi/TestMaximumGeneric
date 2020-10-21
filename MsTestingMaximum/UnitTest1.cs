@@ -96,5 +96,51 @@ namespace TestingMaximum
             ///Assert
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// Testing to return maximum number among three String numbers
+        /// Giving maximum at First Position
+        /// </summary>
+        [TestMethod]
+        public void TestMaxStringone()
+        {
+            ///Arrange
+            string expected = "def";
+            ///Act
+            ///Calling GetMaximum method 
+            string actual = NonGeneric.GetMaxStringNumberAmongThree("def", "cdf", "asd");
+            ///Assert
+            Assert.AreEqual(expected, actual);
+        }
+        /// <summary>
+        /// Testing to return maximum number among three String numbers
+        /// Giving maximum at Second Position
+        /// </summary>
+        [TestMethod]
+        public void TestMaxStringTwo()
+        {
+            ///Arrange
+            string expected = "def";
+            ///Act
+            ///Calling GetMaximum method 
+            string actual = NonGeneric.GetMaxStringNumberAmongThree("cdf","def","asd");
+            ///Assert
+            Assert.AreEqual(expected, actual);
+        }
+        /// <summary>
+        /// Testing to return maximum number among three String numbers
+        /// Giving maximum at Second Position
+        /// </summary>
+        [TestMethod]
+        public void TestMaxStringThree()
+        {
+            ///Arrange
+            string expected = "def";
+            ///Act
+            ///Calling GetMaximum method 
+            string actual = NonGeneric.GetMaxStringNumberAmongThree("cdf", "asd","def");
+            ///Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
+
