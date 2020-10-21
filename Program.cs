@@ -11,6 +11,7 @@ namespace TestMaximum
             Console.WriteLine(NonGeneric.GetMaxIntNumberAmongThree(13, 23, 45));
             Console.WriteLine( NonGeneric.GetMaxfloatNumberAmongThree(27.5f, 34.9f, 98.7f));
             Console.WriteLine(NonGeneric.GetMaxStringNumberAmongThree("asd", "cdf", "def"));
+            Generic<int>.TestMaximum(3, 6, 9);
         }
     }
 }
