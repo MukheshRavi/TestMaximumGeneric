@@ -142,14 +142,13 @@ namespace TestingMaximum
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        [DataRow(1,2,3)]
-        public void TestMaxNumber(int first,int second,int third)
+        public void TestMaxNumber()
         {
             ///Arrange
-            int expected = 3;
+            int expected = 78;
             ///Act
             ///Calling GetMaximum method 
-            int actual = new Generic<int>(first,second,third).GetMaxAmongThree();
+            int actual = new Generic<int>(new int[] { 34, 45, 56, 78 }).TestMaximum();
             ///Assert
             Assert.AreEqual(expected, actual);
         }
