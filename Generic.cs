@@ -1,74 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 
 namespace TestMaximum
 {
-    /// <summary>
-    /// Generic class where datatype is defined
-    ///  should extend interface-IComparable to call compareTo method.
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class Generic<T> where T : IComparable
+   public class Generic<T> where T : IComparable
     {
-        //defining variables of generic type
-       public T first;
-       public T second;
-       public T third;
-        public Generic()
-        {
+         T[] numbers;
 
-        }
         /// <summary>
-        /// parameter constructor to initialize variables
+        /// Initializes a new instance of the <see cref="MaximumTester{T}"/> class.
         /// </summary>
-        /// <param name="first"></param>
-        /// <param name="second"></param>
-        /// <param name="third"></param>
-        public Generic(T first, T second, T third)
+        /// <param name="entries">The entries.</param>
+        public Generic(T[] numbers)
         {
-            this.first = first;
-            this.second= second;
-            this.third = third;
-        }
-        /// <summary>
-        /// This method is used to internally call the GetMaxAmongThree function
-        /// </summary>
-        /// <param name="first"></param>
-        /// <param name="second"></param>
-        /// <param name="third"></param>
-        public static void TestMaximum(T first, T second, T third)
-        {
-            ///Creating object to instantiate constructor and to call the method 
-            T result = new Generic<T>(first, second, third). GetMaxAmongThree();
-            ///Displaying Maximum Number returned from GetMaxAmongThree function
-            Console.WriteLine(result);
-
+            this.numbers = numbers;
         }
 
         /// <summary>
-        /// This method is used to find out max among three by using generics, any data type can be provided
+        /// Tests the maximum.
         /// </summary>
-        /// <param name="first"></param>
-        /// <param name="second"></param>
-        /// <param name="third"></param>
         /// <returns></returns>
-        public  T GetMaxAmongThree()
+        public T TestMaximum()
         {
-            Console.WriteLine("Maximum Number");
-            //compare to method is used to compare 2 numbers
-            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
-                return first;
-            if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
-                return second;
-            if (third.CompareTo(second) > 0 && third.CompareTo(first) > 0)
-                return third;
-            else
-            {
-                throw new Exception("All 3 numbers are same");
-            }
+            return GetMaxNumber(numbers);
         }
-       
+       /// <summary>
+       /// This method returns the max number among given numbers
+       /// </summary>
+       /// <param name="numbers"></param>
+       /// <returns></returns>
+        private T GetMaxNumber(T[] numbers)
+        {
+            Array.Reverse(numbers);
+            PrintMax(numbers[0]);
+            return numbers[0];
+        }
+
+        /// <summary>
+        /// Prints the maximum.
+        /// </summary>
+        /// <param name="maxValue">The maximum value.</param>
+        private void PrintMax(T maxValue)
+        {
+            Console.WriteLine("The maximum number is:",numbers[0]);
+        }
     }
 }
