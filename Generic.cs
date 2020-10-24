@@ -32,6 +32,7 @@ namespace TestMaximum
        /// <returns></returns>
         private T GetMaxNumber(T[] numbers)
         {
+            Array.Sort(numbers);
             Array.Reverse(numbers);
             PrintMax(numbers[0]);
             return numbers[0];
